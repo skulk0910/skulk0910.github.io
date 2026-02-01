@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raster Angle Analysis | Sahil Kulkarni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-theme="light">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">SK</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Home</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-detail">
+        <section class="hero-mini">
+            <div class="container">
+                <h1>Raster Angle Effects on 3D-Printed CFR-PLA</h1>
+                <p>Mechanical characterization and microstructural analysis of composite prints.</p>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="content-block">
+                    <h2>Project Overview</h2>
+                    <p>This experimental study investigated how the raster angle (the orientation of the deposited material strands) influences the flexural strength and failure mechanisms of Carbon Fiber Reinforced PLA (CFR-PLA). By combining mechanical testing with Scanning Electron Microscopy (SEM), we established a clear correlation between print orientation and structural performance.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Experimental Design</h2>
+                    <ul>
+                        <li><strong>Specimen Fabrication:</strong> Samples were printed using a high-precision FDM printer with raster angles of 0°, 45°, and 90°.</li>
+                        <li><strong>Mechanical Testing:</strong> Performed three-point bending tests according to <strong>ASTM D790</strong> standards to determine flexural modulus and peak strength.</li>
+                        <li><strong>Microstructural Analysis:</strong> Utilized <strong>Scanning Electron Microscopy (SEM)</strong> to examine fracture surfaces, focusing on fiber-matrix adhesion and void distribution.</li>
+                        <li><strong>Data Analysis:</strong> Processed raw load-displacement data to calculate average strength and standard deviation across multiple specimens.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Key Results & Analysis</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-val">25%</span>
+                            <span class="stat-desc">Strength Increase (0° vs 45°)</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val">ASTM D790</span>
+                            <span class="stat-desc">Testing Protocol</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val">SEM</span>
+                            <span class="stat-desc">Micro-Failure Mode Identified</span>
+                        </div>
+                    </div>
+                    <p>Analysis of the data revealed that a 0° raster angle provides the highest flexural strength due to the alignment of carbon fibers with the principal stress direction. SEM imagery confirmed that delamination was the primary failure mode for 45° and 90° samples, whereas fiber breakage predominated in 0° samples.</p>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sahil Kulkarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
