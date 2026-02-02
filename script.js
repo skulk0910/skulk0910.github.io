@@ -76,4 +76,51 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(section);
+
+    // Hamburger Menu Logic
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (hamburgerMenu && mobileMenu) {
+    // Toggle menu visibility
+    hamburgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        }
+    });
+}
+
+// Mobile theme toggle
+if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+        
+        // Update mobile theme toggle icon
+        const mobileIcon = mobileThemeToggle.querySelector('i');
+        if (mobileIcon) {
+            mobileIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    });
+}
 });
