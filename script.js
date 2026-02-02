@@ -78,7 +78,7 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 
     // Hamburger Menu Logic
-const hamburgerMenu = document.getElementById('hamburger-menu');
+const hamburgerMenu = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
